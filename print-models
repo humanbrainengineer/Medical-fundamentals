@@ -10,3 +10,6 @@ vgg = pretrainedmodels.inceptionv4().to(device)           # used in the  pretrai
 
 
 summary(vgg, (3, 300, 300))
+
+
+#https://data.lip6.fr/cadene/pretrainedmodels/
