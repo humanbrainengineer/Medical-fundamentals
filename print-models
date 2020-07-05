@@ -13,3 +13,60 @@ summary(vgg, (3, 300, 300))
 
 
 #https://data.lip6.fr/cadene/pretrainedmodels/
+
+
+
+
+#--------Ver1-------------https://github.com/leaderj1001/MobileNetV3-Pytorch-------------------------
+
+import torch
+
+from model import MobileNetV3
+
+def get_model_parameters(model):
+    total_parameters = 0
+    for layer in list(model.parameters()):
+        layer_parameter = 1
+        for l in list(layer.size()):
+            layer_parameter *= l
+        total_parameters += layer_parameter
+    return total_parameters
+
+tmp = torch.randn((128, 3, 224, 224))
+model = MobileNetV3(model_mode="LARGE", multiplier=1.0)
+print("Number of model parameters: ", get_model_parameters(model))
+
+
+
+#--------Ver2-----------
+
+import torch
+
+from model import MobileNetV3
+from torchsummary import summary
+
+
+def get_model_parameters(model):
+    total_parameters = 0
+    for layer in list(model.parameters()):
+        layer_parameter = 1
+        for l in list(layer.size()):
+            layer_parameter *= l
+        total_parameters += layer_parameter
+    return total_parameters
+
+tmp = torch.randn((128, 3, 224, 224))
+model = MobileNetV3(model_mode="LARGE", multiplier=1.0)
+
+summary(model, (3, 300, 300))
+
+#print(model)
+print("Number of model parameters: ", get_model_parameters(model))
+
+
+
+
+
+
+
+
