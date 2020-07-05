@@ -17,7 +17,7 @@ summary(vgg, (3, 300, 300))
 
 
 
-#--------Ver1-------------https://github.com/leaderj1001/MobileNetV3-Pytorch-------------------------
+#--------Ver1-------------https://github.com/leaderj1001/MobileNetV3-Pytorch------------fails version-------------
 
 import torch
 
@@ -38,7 +38,7 @@ print("Number of model parameters: ", get_model_parameters(model))
 
 
 
-#--------Ver2-----------
+#--------Ver2------Must need the ： https://github.com/leaderj1001/MobileNetV3-Pytorch  -----
 
 import torch
 
