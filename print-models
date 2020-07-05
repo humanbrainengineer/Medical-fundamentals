@@ -5,8 +5,8 @@ import pretrainedmodels
 
 
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
-#vgg = models.inception_v3().to(device)                 # used in the  torchvision
-vgg = pretrainedmodels.inceptionv4().to(device)           # used in the  pretrainedmodels
+#vgg = models.inception_v3().to(device)                 # used in the  torchvision only V3
+vgg = pretrainedmodels.inceptionv4().to(device)           # used in the  pretrainedmodels  V3 and V4
 
 
 summary(vgg, (3, 300, 300))
