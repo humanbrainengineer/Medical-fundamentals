@@ -6,7 +6,7 @@ import pretrainedmodels
 
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 #vgg = models.inception_v3().to(device)                 # used in the  torchvision only ------Inception V3 (no) 和  mobilenet V2(OK)    绝对没有Inception V4
-vgg = pretrainedmodels.inceptionv4().to(device)           # used in the  pretrainedmodels  ------Inception V3(no)   and Inception V4(OK)
+vgg = pretrainedmodels.inceptionv4().to(device)           # used in the  pretrainedmodels  ------Inception V3(no)   and Inception V4(OK with (3, 300, 300))
 
 
 summary(vgg, (3, 300, 300))
