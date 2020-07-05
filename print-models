@@ -5,8 +5,8 @@ import pretrainedmodels
 
 
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
-#vgg = models.inception_v3().to(device)                 # used in the  torchvision only V3
-vgg = pretrainedmodels.inceptionv4().to(device)           # used in the  pretrainedmodels  V3 and V4
+#vgg = models.inception_v3().to(device)                 # used in the  torchvision only ------Inception V3 (no) 和  mobilenet V2(OK) 
+vgg = pretrainedmodels.inceptionv4().to(device)           # used in the  pretrainedmodels  ------Inception V3(no)   and Inception V4(OK)
 
 
 summary(vgg, (3, 300, 300))
@@ -38,7 +38,7 @@ print("Number of model parameters: ", get_model_parameters(model))
 
 
 
-#--------Ver2------Must need the ： https://github.com/leaderj1001/MobileNetV3-Pytorch  -----
+#--------Ver2------Must need the ： https://github.com/leaderj1001/MobileNetV3-Pytorch  -----   只能打印MobileNetV3
 
 import torch
 
